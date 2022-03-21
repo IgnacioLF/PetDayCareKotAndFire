@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/linearmain">
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -27,10 +28,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearbotones">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonregistrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -38,7 +40,7 @@
             android:layout_margin="10dp"/>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonacceder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
