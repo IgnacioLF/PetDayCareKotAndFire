@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".edit"
     android:orientation="vertical"
-    android:id="@+id/linearmain">
-
+    android:id="@+id/linearmain"
+    tools:context=".newpet">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="lua" />
+                android:hint="Nombre"/>
 
             <EditText
                 android:id="@+id/raza"
@@ -46,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Bulldog" />
+                android:hint="Raza" />
         </LinearLayout>
     </LinearLayout>
 
@@ -95,6 +94,7 @@
             android:layout_margin="10dp"
             android:layout_weight="0.5"
             android:ems="10"
+            android:hint="Peso"
             android:inputType="number" />
     </LinearLayout>
 
@@ -103,17 +103,12 @@
         android:id="@+id/relativeabajo"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="test" />
-
         <Button
             android:id="@+id/buttonguardar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="guardar" />
+            android:text="nueva" />
     </RelativeLayout>
+
 </LinearLayout>

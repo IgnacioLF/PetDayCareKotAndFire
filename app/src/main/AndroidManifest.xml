@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetDayCareKotAndFire">
         <activity
+            android:name=".newpet"
+            android:exported="false" />
+        <activity
             android:name=".edit"
             android:exported="false" />
         <activity
