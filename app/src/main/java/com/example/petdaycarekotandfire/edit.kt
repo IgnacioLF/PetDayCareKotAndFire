@@ -18,7 +18,8 @@ class edit : AppCompatActivity() {
         var guardar = findViewById<Button>(R.id.buttonguardar)
         var text = findViewById<TextView>(R.id.test)
         guardar.setOnClickListener {
-            text.setText(spinadapter.getPosition())
+
         }
     }
 }
+
