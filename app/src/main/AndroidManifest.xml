@@ -11,16 +11,23 @@
         android:theme="@style/Theme.PetDayCareKotAndFire">
         <activity
             android:name=".newpet"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Nueva Mascota"
+            android:parentActivityName=".Listado"/>
         <activity
             android:name=".edit"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Editar Mascota"
+            android:parentActivityName=".Listado"/>
         <activity
             android:name=".Listado"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Listado de Mascotas"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

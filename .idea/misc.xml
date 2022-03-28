@@ -3,12 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ilopez/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/layout/activity_edit.xml" value="0.25" />
+        <entry key="..\:/Users/ilopez/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/layout/activity_edit.xml" value="0.33" />
         <entry key="..\:/Users/ilopez/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/layout/activity_listado.xml" value="0.240625" />
         <entry key="..\:/Users/ilopez/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/ilopez/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/layout/activity_newpet.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/sozzza/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/layout/activity_edit.xml" value="0.25" />
         <entry key="..\:/Users/sozzza/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/sozzza/AndroidStudioProjects/PetDayCareKotAndFire/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
