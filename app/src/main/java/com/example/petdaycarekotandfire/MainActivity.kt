@@ -14,19 +14,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val test = FirebaseAnalytics.getInstance(this)
         val acceder = findViewById<Button>(R.id.buttonacceder)
-        acceder.setOnClickListener { startActivity(Intent(applicationContext,edit::class.java))}
+        acceder.setOnClickListener {
+            login()
+        }
 
         val bregistrar = findViewById<Button>(R.id.buttonregistrar)
         bregistrar.setOnClickListener {
             register()
         }
+
+        val bedit = findViewById<Button>(R.id.buttonedit)
+        bedit.setOnClickListener {
+            startActivity(Intent(applicationContext,edit::class.java))
+        }
     }
     fun register (){
         var email =findViewById<EditText>(R.id.editTextTextEmailAddress)
         var pass = findViewById<EditText>(R.id.editTextTextPassword)
-
         if (email.text.isNotEmpty() && pass.text.isNotEmpty()){
             FirebaseAuth.getInstance()
                 .createUserWithEmailAndPassword(email.text.toString(),pass.text.toString()).addOnCompleteListener {
@@ -40,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "Alguno de los campos esta vacio", Toast.LENGTH_LONG).show()
         }
     }
-
     fun showalert(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
@@ -48,5 +52,21 @@ class MainActivity : AppCompatActivity() {
         builder.setPositiveButton("Aceptar",null)
         val dialog = builder.create()
         dialog.show()
+    }
+    fun login(){
+        var email =findViewById<EditText>(R.id.editTextTextEmailAddress)
+        var pass = findViewById<EditText>(R.id.editTextTextPassword)
+        if (email.text.isNotEmpty() && pass.text.isNotEmpty()){
+            FirebaseAuth.getInstance()
+                .signInWithEmailAndPassword(email.text.toString(),pass.text.toString()).addOnCompleteListener {
+                    if (it.isSuccessful){
+                        startActivity(Intent(applicationContext,Listado::class.java))
+                    }else {
+                        showalert()
+                    }
+                }
+        } else {
+            Toast.makeText(applicationContext, "Alguno de los campos esta vacio", Toast.LENGTH_LONG).show()
+        }
     }
 }
