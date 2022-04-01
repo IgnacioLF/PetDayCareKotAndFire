@@ -7,7 +7,7 @@
     tools:context=".Listado">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonpata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="pata"
@@ -15,7 +15,20 @@
         android:layout_alignParentRight="true"
         android:layout_margin="20dp"/>
 
+    <TextView
+        android:id="@+id/textViewempty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:text="No hay mascotas añadidas. \n Presione la huella para añadir una nueva" />
+
     <ListView
+        android:id="@+id/listviewmascotas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+    </ListView>
 </RelativeLayout>

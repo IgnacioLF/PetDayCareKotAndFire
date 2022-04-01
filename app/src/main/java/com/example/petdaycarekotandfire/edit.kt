@@ -35,8 +35,8 @@ class edit : AppCompatActivity() {
         }
 
         guardar.setOnClickListener {
-            var testpet = pet("test","test",,"test")
-            text.setText(testpet.)
+          //  var testpet = pet("test","test",spinner.selectedItemPosition,"test")
+            text.setText(prebaenum.valueOf("1").toString())
             // spinner.selectedItemPosition.toInt()
         }
     }
