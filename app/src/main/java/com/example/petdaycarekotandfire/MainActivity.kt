@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val bedit = findViewById<Button>(R.id.buttonedit)
         bedit.setOnClickListener {
-            startActivity(Intent(applicationContext,newpet::class.java))
+            startActivity(Intent(applicationContext,Listado::class.java))
         }
     }
     fun register (){

@@ -18,8 +18,14 @@ class edit : AppCompatActivity() {
         var spinadapter = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,generolista)
         spinner.adapter=spinadapter
         var guardar = findViewById<Button>(R.id.buttonguardar)
-        // temp
-        var text = findViewById<TextView>(R.id.test)
+        var intent : Intent? = intent
+        var currentpet = intent?.getSerializableExtra("mascota") as pet
+        val editTextnombre = findViewById<EditText>(R.id.edittextnombre)
+        val editTextraza = findViewById<EditText>(R.id.edittextraza)
+        val editTextconstitucion = findViewById<EditText>(R.id.editTextconstitucion)
+        editTextnombre.setText(currentpet.nombre)
+        editTextraza.setText(currentpet.raza)
+        editTextconstitucion.setText(currentpet.peso)
         spinner.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener{
                 override fun onItemSelected(
@@ -33,12 +39,9 @@ class edit : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         }
-
+        spinner.setSelection(currentpet.genero.ordinal)
         guardar.setOnClickListener {
-          //  var testpet = pet("test","test",spinner.selectedItemPosition,"test")
-         //   text.setText(prebaenum.valueOf("1").toString())
-            // spinner.selectedItemPosition.toInt()
-            text.setText(spinner.getSelectedItem().toString())
+            TODO("GUARDAR EN FIREBASE")
         }
     }
 
