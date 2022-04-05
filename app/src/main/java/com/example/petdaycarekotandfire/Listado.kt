@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 import androidx.core.view.isEmpty
@@ -43,6 +44,10 @@ class Listado : AppCompatActivity() {
             .addOnSuccessListener { result ->
                 var listmascotas = ArrayList<pet>()
                 for (document in result) {
+                    val bnewpet = findViewById<Button>(R.id.buttonpata)
+                    bnewpet.setOnClickListener {
+                        startActivity(Intent(applicationContext,newpet::class.java))
+                    }
                     val currentname = document.data["name"].toString()
                     val currentraza = document.data["raza"].toString()
                     val currentgenero = document.data["genero"].toString()
