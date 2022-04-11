@@ -18,15 +18,9 @@ class MainActivity : AppCompatActivity() {
         acceder.setOnClickListener {
             login()
         }
-
         val bregistrar = findViewById<Button>(R.id.buttonregistrar)
         bregistrar.setOnClickListener {
             register()
-        }
-
-        val bedit = findViewById<Button>(R.id.buttonedit)
-        bedit.setOnClickListener {
-            startActivity(Intent(applicationContext,Listado::class.java))
         }
     }
     fun register (){

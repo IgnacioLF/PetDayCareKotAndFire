@@ -17,7 +17,6 @@ class newpet : AppCompatActivity() {
     lateinit var editTextraza: EditText
     lateinit var editTextpeso: EditText
     lateinit var spinner: Spinner
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_newpet)
@@ -38,7 +37,6 @@ class newpet : AppCompatActivity() {
             ) {
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("Not yet implemented")
             }
         }
         var bnueva = findViewById<Button>(R.id.buttonnueva)
@@ -81,6 +79,7 @@ class newpet : AppCompatActivity() {
             .add(mascota)
             .addOnSuccessListener { documentReference ->
                 Toast.makeText(applicationContext, "La mascota fue creada con exito", Toast.LENGTH_LONG).show()
+                startActivity(Intent(applicationContext,Listado::class.java))
             }
             .addOnFailureListener { e ->
                 Toast.makeText(applicationContext, "Ha ocurrido un error a la hora de crear la mascota", Toast.LENGTH_LONG).show()
