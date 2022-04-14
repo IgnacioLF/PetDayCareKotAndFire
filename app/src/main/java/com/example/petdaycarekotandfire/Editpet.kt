@@ -3,7 +3,6 @@ package com.example.petdaycarekotandfire
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -12,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class edit : AppCompatActivity() {
+class Editpet : AppCompatActivity() {
     lateinit var editTextnombre: EditText
     lateinit var editTextraza: EditText
     lateinit var editTextpeso: EditText
@@ -27,7 +26,7 @@ class edit : AppCompatActivity() {
         spinner.adapter=spinadapter
         var guardar = findViewById<Button>(R.id.buttonguardar)
         var intent : Intent? = intent
-        var currentpet = intent?.getSerializableExtra("mascota") as pet
+        var currentpet = intent?.getSerializableExtra("mascota") as Pet
         editTextnombre = findViewById<EditText>(R.id.edittextnombre)
         editTextraza = findViewById<EditText>(R.id.edittextraza)
         editTextpeso = findViewById<EditText>(R.id.editTextconstitucion)

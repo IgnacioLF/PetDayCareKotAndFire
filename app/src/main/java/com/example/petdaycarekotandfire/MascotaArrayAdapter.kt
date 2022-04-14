@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class MascotaArrayAdapter (context : Context, viewtopaint : Int, private val mascotaslist : ArrayList<pet>) : ArrayAdapter<pet> (context,viewtopaint,mascotaslist) {
+class MascotaArrayAdapter (context : Context, viewtopaint : Int, private val mascotaslist : ArrayList<Pet>) : ArrayAdapter<Pet> (context,viewtopaint,mascotaslist) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = LayoutInflater.from(context)

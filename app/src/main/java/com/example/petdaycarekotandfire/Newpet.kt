@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class newpet : AppCompatActivity() {
+class Newpet : AppCompatActivity() {
 
     lateinit var editTextnombre: EditText
     lateinit var editTextraza: EditText
@@ -52,7 +52,6 @@ class newpet : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         FirebaseAuth.getInstance().signOut()
         startActivity(Intent(applicationContext,MainActivity::class.java))
@@ -66,7 +65,6 @@ class newpet : AppCompatActivity() {
         }
         return false
     }
-
     private fun  nuevaMascota(){
         val db = Firebase.firestore
         val mascota = hashMapOf(

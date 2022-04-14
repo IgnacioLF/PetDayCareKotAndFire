@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetDayCareKotAndFire">
         <activity
-            android:name=".newpet"
+            android:name=".Newpet"
             android:exported="false"
             android:label="Nueva Mascota"
             android:parentActivityName=".Listado"/>
         <activity
-            android:name=".edit"
+            android:name=".Editpet"
             android:exported="false"
             android:label="Editar Mascota"
             android:parentActivityName=".Listado"/>
