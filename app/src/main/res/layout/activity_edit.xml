@@ -103,11 +103,28 @@
         android:id="@+id/relativeabajo"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/buttonguardar"
+        <LinearLayout
+            android:id="@+id/linnearburttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="guardar" />
+
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/buttonguardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="guardar" />
+
+            <Button
+                android:id="@+id/buttonborrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:text="Borrar" />
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

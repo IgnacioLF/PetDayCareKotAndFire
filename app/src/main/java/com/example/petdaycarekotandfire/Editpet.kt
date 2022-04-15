@@ -50,6 +50,16 @@ class Editpet : AppCompatActivity() {
         guardar.setOnClickListener {
             modifypet()
         }
+        var borrarb = findViewById<Button>(R.id.buttonborrar)
+        borrarb.setOnClickListener {
+            val db = Firebase.firestore
+            db.collection("Mascotas").document(id)
+                .delete()
+                .addOnSuccessListener { Toast.makeText(applicationContext, "La mascota fue eliminada con exito", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(applicationContext,Listado::class.java))
+                }
+                .addOnFailureListener { e -> Toast.makeText(applicationContext, "Ocurrio un error y la mascota no pudo ser eliminada", Toast.LENGTH_LONG).show() }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
